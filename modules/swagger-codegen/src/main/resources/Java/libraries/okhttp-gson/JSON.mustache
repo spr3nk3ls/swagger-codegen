@@ -132,6 +132,8 @@ public class JSON {
      */
     public static class DateTimeTypeAdapter extends TypeAdapter<DateTime> {
 
+        private DateTimeFormatter formatter;
+
         private final DateTimeFormatter parseFormatter = ISODateTimeFormat.dateOptionalTimeParser();
         private final DateTimeFormatter printFormatter = ISODateTimeFormat.dateTime();
 
